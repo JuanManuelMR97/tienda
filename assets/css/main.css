@@ -51,7 +51,7 @@ a#scrollUp {
   bottom: 0px;
   right: 10px;
   padding: 5px 10px;
-  background: #FE980F;
+  background: #3366BB;
   color: #FFF;
   -webkit-animation: bounce 2s ease infinite;
   animation: bounce 2s ease infinite;
@@ -214,7 +214,7 @@ a#scrollUp i{
 
 
 .shop-menu ul li a:hover {
-	color:#fe980f;
+	color:#3366BB;
 	background:#fff;
 }
 
@@ -248,7 +248,7 @@ a#scrollUp i{
 
 .mainmenu ul li a:hover, .mainmenu ul li a.active,  .shop-menu ul li a.active{
 	background:none;
-	color:#fdb45e;
+	color:#3366BB;
 }
 
 .search_box input {
@@ -289,7 +289,7 @@ ul.sub-menu {
 	position: absolute;
 	top: 30px;
 	left: 0;
-	background: rgba(0, 0, 0, 0.6);
+	background: #D6D6D0;
 	list-style: none;
 	padding: 0;
 	margin: 0;
@@ -319,7 +319,7 @@ ul.sub-menu {
 }
 
 .navbar-nav li ul.sub-menu li a:hover{
-    color: #FDB45E;
+    color: #3366BB;
 }
 
 .fa-angle-down{
@@ -404,7 +404,7 @@ ul.sub-menu {
   top: 0;
   width: 100%;
   height: 61px;
-  background: #FE980F;
+  background: #3366BB;
   border-radius: 3px;
   color: #FFF;
   font-size: 20px;
@@ -556,7 +556,7 @@ ul.sub-menu {
 }
 
 .footer-bottom p span a {
-  color: #FE980F;
+  color: #3366BB;
   font-style: italic;
   text-decoration: underline;
 }
@@ -659,7 +659,7 @@ ul.sub-menu {
   padding-top: 15px;
 }
 .left-sidebar h2, .brands_products h2 {
-  color: #FE980F;
+  color: #3366BB;
   font-family: 'Roboto', sans-serif;
   font-size: 18px;
   font-weight: 700;
@@ -834,7 +834,7 @@ h2.title:before{
 
 
 h2.title {
-  color: #FE980F;
+  color: #3366BB;
   font-family: 'Roboto', sans-serif;
   font-size: 18px;
   font-weight: 700;
@@ -861,7 +861,7 @@ h2.title {
 }
 
 .productinfo h2{
-	color: #FE980F;
+	color: #3366BB;
 	font-family: 'Roboto', sans-serif;
 	font-size: 24px;
 	font-weight: 700;
@@ -890,7 +890,7 @@ h2.title {
 }
 
 .product-overlay {
-  background:#FE980F;
+  background:#3366BB;
   top: 0;
   display: none;
   height: 0;
@@ -918,7 +918,7 @@ h2.title {
   background:#fff;
   border: 0 none;
   border-radius: 0;
-  color: #FE980F;
+  color: #3366BB;
   font-family: 'Roboto', sans-serif;
   font-size: 15px;
   margin-bottom: 25px;
@@ -926,7 +926,7 @@ h2.title {
 
 .product-overlay .add-to-cart:hover {
   background:#fff;
-  color: #FE980F;
+  color: green;
 }
 
 
@@ -965,7 +965,7 @@ h2.title {
 }
 
 .add-to-cart:hover {
-  background: #FE980F;
+  background: #3366BB;
   color: #FFFFFF;
 }
 
@@ -1052,7 +1052,7 @@ h2.title {
 }
 
 .recommended-item-control i {
-  background: none repeat scroll 0 0 #FE980F;
+  background: none repeat scroll 0 0 #3366BB;
   color: #FFFFFF;
   font-size: 20px;
   padding: 4px 10px;
