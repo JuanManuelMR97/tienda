@@ -18,4 +18,9 @@ class Login_model extends CI_Model {
         }
     }
 
+    public function get_provincias() {
+        $this->db->select('id, provincia');
+        return $this->db->get('provincias');
+    }
+
 }

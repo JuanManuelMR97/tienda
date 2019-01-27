@@ -7,13 +7,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Inicio | R-Shop</title>
-        <link href="<?php echo base_url(); ?>assets/css/bootstrap.min.css" rel="stylesheet">
-        <link href="<?php echo base_url(); ?>assets/css/font-awesome.min.css" rel="stylesheet">
-        <link href="<?php echo base_url(); ?>assets/css/prettyPhoto.css" rel="stylesheet">
-        <link href="<?php echo base_url(); ?>assets/css/price-range.css" rel="stylesheet">
-        <link href="<?php echo base_url(); ?>assets/css/animate.css" rel="stylesheet">
-        <link href="<?php echo base_url(); ?>assets/css/main.css" rel="stylesheet">
-        <link href="<?php echo base_url(); ?>assets/css/responsive.css" rel="stylesheet">  
+        <link rel="icon" type="image/png" href="<?= base_url(); ?>assets/img/home/simbolo.png">
+        <link href="<?= base_url(); ?>assets/css/bootstrap.min.css" rel="stylesheet">
+        <link href="<?= base_url(); ?>assets/css/font-awesome.min.css" rel="stylesheet">
+        <link href="<?= base_url(); ?>assets/css/prettyPhoto.css" rel="stylesheet">
+        <link href="<?= base_url(); ?>assets/css/price-range.css" rel="stylesheet">
+        <link href="<?= base_url(); ?>assets/css/animate.css" rel="stylesheet">
+        <link href="<?= base_url(); ?>assets/css/main.css" rel="stylesheet">
+        <link href="<?= base_url(); ?>assets/css/responsive.css" rel="stylesheet">  
         <link rel="shortcut icon" href="images/ico/favicon.ico">
         <link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/ico/apple-touch-icon-144-precomposed.png">
         <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/ico/apple-touch-icon-114-precomposed.png">
@@ -44,8 +45,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                         <button type="button" class="btn btn-default get">Get it now</button>
                                     </div>
                                     <div class="col-sm-6">
-                                        <img src="<?php echo base_url(); ?>assets/img/home/girl1.jpg" class="girl img-responsive" alt="" />
-                                        <img src="<?php echo base_url(); ?>assets/img/home/pricing.png"  class="pricing" alt="" />
+                                        <img src="<?= base_url(); ?>assets/img/home/girl1.jpg" class="girl img-responsive" alt="" />
+                                        <img src="<?= base_url(); ?>assets/img/home/pricing.png"  class="pricing" alt="" />
                                     </div>
                                 </div>
                                 <div class="item">
@@ -56,8 +57,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                         <button type="button" class="btn btn-default get">Get it now</button>
                                     </div>
                                     <div class="col-sm-6">
-                                        <img src="<?php echo base_url(); ?>assets/img/home/girl2.jpg" class="girl img-responsive" alt="" />
-                                        <img src="<?php echo base_url(); ?>assets/img/home/pricing.png"  class="pricing" alt="" />
+                                        <img src="<?= base_url(); ?>assets/img/home/girl2.jpg" class="girl img-responsive" alt="" />
+                                        <img src="<?= base_url(); ?>assets/img/home/pricing.png"  class="pricing" alt="" />
                                     </div>
                                 </div>
 
@@ -69,8 +70,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                         <button type="button" class="btn btn-default get">Get it now</button>
                                     </div>
                                     <div class="col-sm-6">
-                                        <img src="<?php echo base_url(); ?>assets/img/home/girl3.jpg" class="girl img-responsive" alt="" />
-                                        <img src="<?php echo base_url(); ?>assets/img/home/pricing.png" class="pricing" alt="" />
+                                        <img src="<?= base_url(); ?>assets/img/home/girl3.jpg" class="girl img-responsive" alt="" />
+                                        <img src="<?= base_url(); ?>assets/img/home/pricing.png" class="pricing" alt="" />
                                     </div>
                                 </div>
 
@@ -120,7 +121,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                     <div class="product-image-wrapper">
                                         <div class="single-products">
                                             <div class="productinfo text-center">
-                                                <img src="<?php echo base_url() . $producto->imagen ?>" alt="" />
+                                                <img src="<?= base_url() . $producto->imagen ?>" alt="" />
                                                 <h2><?= $producto->precio_venta ?> €</h2>
                                                 <p><?= $producto->nombre ?></p>
                                                 <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
@@ -148,7 +149,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                             <div class="product-image-wrapper">
                                                 <div class="single-products">
                                                     <div class="productinfo text-center">
-                                                        <img src="<?php echo base_url(); ?>assets/img/home/recommend1.jpg" alt="" />
+                                                        <img src="<?=base_url(); ?>assets/img/home/recommend1.jpg" alt="" />
                                                         <h2>$56</h2>
                                                         <p>Easy Polo Black Edition</p>
                                                         <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
@@ -161,7 +162,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                             <div class="product-image-wrapper">
                                                 <div class="single-products">
                                                     <div class="productinfo text-center">
-                                                        <img src="<?php echo base_url(); ?>assets/img/home/recommend2.jpg" alt="" />
+                                                        <img src="<?= base_url(); ?>assets/img/home/recommend2.jpg" alt="" />
                                                         <h2>$56</h2>
                                                         <p>Easy Polo Black Edition</p>
                                                         <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
@@ -174,7 +175,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                             <div class="product-image-wrapper">
                                                 <div class="single-products">
                                                     <div class="productinfo text-center">
-                                                        <img src="<?php echo base_url(); ?>assets/img/home/recommend3.jpg" alt="" />
+                                                        <img src="<?= base_url(); ?>assets/img/home/recommend3.jpg" alt="" />
                                                         <h2>$56</h2>
                                                         <p>Easy Polo Black Edition</p>
                                                         <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
@@ -189,7 +190,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                             <div class="product-image-wrapper">
                                                 <div class="single-products">
                                                     <div class="productinfo text-center">
-                                                        <img src="<?php echo base_url(); ?>assets/img/home/recommend1.jpg" alt="" />
+                                                        <img src="<?= base_url(); ?>assets/img/home/recommend1.jpg" alt="" />
                                                         <h2>$56</h2>
                                                         <p>Easy Polo Black Edition</p>
                                                         <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
@@ -202,7 +203,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                             <div class="product-image-wrapper">
                                                 <div class="single-products">
                                                     <div class="productinfo text-center">
-                                                        <img src="<?php echo base_url(); ?>assets/img/home/recommend2.jpg" alt="" />
+                                                        <img src="<?= base_url(); ?>assets/img/home/recommend2.jpg" alt="" />
                                                         <h2>$56</h2>
                                                         <p>Easy Polo Black Edition</p>
                                                         <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
@@ -215,7 +216,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                             <div class="product-image-wrapper">
                                                 <div class="single-products">
                                                     <div class="productinfo text-center">
-                                                        <img src="<?php echo base_url(); ?>assets/img/home/recommend3.jpg" alt="" />
+                                                        <img src="<?= base_url(); ?>assets/img/home/recommend3.jpg" alt="" />
                                                         <h2>$56</h2>
                                                         <p>Easy Polo Black Edition</p>
                                                         <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
@@ -243,11 +244,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <?php $this->load->view('plantilla/pie'); ?>
 
 
-        <script src="<?php echo base_url(); ?>assets/js/jquery.js"></script>
-        <script src="<?php echo base_url(); ?>assets/js/bootstrap.min.js"></script>
-        <script src="<?php echo base_url(); ?>assets/js/jquery.scrollUp.min.js"></script>
-        <script src="<?php echo base_url(); ?>assets/js/price-range.js"></script>
-        <script src="<?php echo base_url(); ?>assets/js/jquery.prettyPhoto.js"></script>
-        <script src="<?php echo base_url(); ?>assets/js/main.js"></script>
+        <script src="<?= base_url(); ?>assets/js/jquery.js"></script>
+        <script src="<?= base_url(); ?>assets/js/bootstrap.min.js"></script>
+        <script src="<?= base_url(); ?>assets/js/jquery.scrollUp.min.js"></script>
+        <script src="<?= base_url(); ?>assets/js/price-range.js"></script>
+        <script src="<?= base_url(); ?>assets/js/jquery.prettyPhoto.js"></script>
+        <script src="<?= base_url(); ?>assets/js/main.js"></script>
     </body>
 </html>
