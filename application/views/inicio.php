@@ -97,17 +97,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         <div class="left-sidebar">
                             <h2>Categorías</h2>
                             <div class="panel-group category-products"><!--category-productsr-->
-                                <div class="panel panel-default">
-                                    <div class="panel-heading">
-					<h4 class="panel-title"><a href="#">Hombre</a></h4>
+                                <?php foreach ($categorias->result() as $categoria): ?>
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading">
+                                            <h4 class="panel-title"><a href="<?= site_url('Inicio/productos_tienda/' . $categoria->id_categoria); ?>"><?= $categoria->nombre ?></a></h4>
+                                        </div>
                                     </div>
-				</div>
-
-                                <div class="panel panel-default">
-                                    <div class="panel-heading">
-					<h4 class="panel-title"><a href="#">Mujer</a></h4>
-                                    </div>
-				</div>
+                                <?php endforeach; ?>
                             </div><!--/category-products-->
 
                         </div>

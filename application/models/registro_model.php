@@ -13,12 +13,19 @@ class Registro_model extends CI_Model {
             'apellidos' => $this->input->post('apellidos'),
             'direccion' => $this->input->post('direccion'),
             'codigo_postal' => $this->input->post('cp'),
-            'provincia' => $this->input->post('provincia'),
+            'provincia' => $this->input->post('provincias'),
             'email' => $this->input->post('email'),
             'nombre_usuario' => $this->input->post('nombre_usuario'),
             'contraseña' => $this->input->post('contraseña')
         );
         $this->db->insert('usuario', $datos);
+
+        $registrado = array(
+            'login' => TRUE,
+            'id_usuario' => $this->id_usuario,
+            'nombre_usuario' => $this->input->post('nombre_usuario')
+        );
+        $this->session->set_userdata($registrado);
     }
 
 }

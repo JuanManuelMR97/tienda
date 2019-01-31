@@ -6,7 +6,7 @@ class Login_model extends CI_Model {
         parent::__construct();
     }
 
-    public function login($nombre_usuario, $contraseña) {
+    public function login_ok($nombre_usuario, $contraseña) {
         $this->db->where('nombre_usuario', $nombre_usuario);
         $this->db->where('contraseña', $contraseña);
         $query = $this->db->get('usuario');
@@ -16,11 +16,6 @@ class Login_model extends CI_Model {
         } else {
             return FALSE;
         }
-    }
-
-    public function get_provincias() {
-        $this->db->select('id, provincia');
-        return $this->db->get('provincias');
     }
 
 }

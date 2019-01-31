@@ -57,11 +57,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                 <?= form_error('direccion'); ?>
                                 <input type="text" name="cp" placeholder="Código postal" value="<?= set_value('cp'); ?>" />
                                 <?= form_error('cp'); ?>
-                                <?php foreach ($provincias->result() as $provincia): ?>
-                                    <?= form_dropdown('provincias', $provincia->provincia); ?>
-                                <?php endforeach; ?>
-                                <!--<input type="text" name="provincia" placeholder="Provincia" value="<?= set_value('provincia'); ?>" />-->
-                                <?= form_error('provincia'); ?>
+                                <?= form_dropdown('provincias', dbresult_to_array_null(get_provincias(), 'cod', 'nombre', 'Seleccione una provincia'), set_value('provincias')); ?>
+                                <?= form_error('provincias'); ?>
                                 <input type="text" name="email" placeholder="Correo electrónico" value="<?= set_value('email'); ?>" />
                                 <?= form_error('email'); ?>
                                 <input type="text" name="nombre_usuario" placeholder="Nombre de usuario" value="<?= set_value('nombre_usuario'); ?>" />

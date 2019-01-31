@@ -6,42 +6,39 @@ class Login extends CI_Controller {
 
     public function __construct() {
         parent::__construct();
-        $this->load->helper('form');
-        //$this->load->library('form_validation');
+        $this->load->helper(array('funciones_helper', 'form'));
+        $this->load->library('form_validation');
         $this->load->model('Login_model');
     }
 
     public function index() {
-        /* $this->form_validation->set_rules('user_name', 'Nombre de usuario', 'required');
-          $this->form_validation->set_rules('password', 'Contraseña', 'required'); */
-        
-        $result = $this->Login_model->get_provincias();
-        $datos = array(
-            'provincias' => $result
-        );
-        
         if ($this->session->userdata('login')) {
             redirect('Inicio');
         } else {
-            $this->load->view('login', $datos);
+            $this->load->view('login');
         }
     }
 
     public function login() {
-        $nombre_usuario = $this->input->post('user_name');
-        $contraseña = $this->input->post('password');
-        $conectado = $this->Login_model->login($nombre_usuario, $contraseña);
+        $this->form_validation->set_rules('user_name', 'Nombre de usuario', 'required');
+        $this->form_validation->set_rules('password', 'Contraseña', 'required');
 
-        if ($conectado) {
-            $datos = array(
-                'login' => TRUE,
-                'id_usuario' => $conectado->id_usuario,
-                'nombre_usuario' => $conectado->nombre_usuario
-            );
-            $this->session->set_userdata($datos);
+        if ($this->form_validation->run() == FALSE) {
             $this->index();
         } else {
-            redirect('Login');
+            $nombre_usuario = $this->input->post('user_name');
+            $contraseña = $this->input->post('password');
+            $conectado = $this->Login_model->login_ok($nombre_usuario, $contraseña);
+
+            if ($conectado) {
+                $datos = array(
+                    'login' => TRUE,
+                    'id_usuario' => $conectado->id_usuario,
+                    'nombre_usuario' => $conectado->nombre_usuario
+                );
+                $this->session->set_userdata($datos);
+                $this->index();
+            }
         }
     }
 
