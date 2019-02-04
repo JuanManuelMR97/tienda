@@ -11,11 +11,11 @@
                     <div class="shop-menu pull-right">
                         <ul class="nav navbar-nav">
                             <?php if (!$this->session->userdata('login')): ?>
-                                <li><a href="cart.html"><i class="fa fa-shopping-cart"></i> Cesta</a></li>
+                                <li><a href="<?= site_url('Carrito'); ?>"><i class="fa fa-shopping-cart"></i> Cesta</a></li>
                                 <li><a href="<?= site_url('Login'); ?>"><i class="fa fa-sign-in"></i> Iniciar sesión</a></li>
                             <?php else: ?>
                                 <li><a href="#"><i class="fa fa-user"></i> <?= $this->session->userdata('nombre_usuario'); ?></a></li>
-                                <li><a href="cart.html"><i class="fa fa-shopping-cart"></i> Cesta</a></li>
+                                <li><a href="<?= site_url('Carrito'); ?>"><i class="fa fa-shopping-cart"></i> Cesta</a></li>
                                 <li><a href="<?= site_url('Login/logout'); ?>"><i class="fa fa-sign-out"></i> Cerrar sesión</a></li>
                             <?php endif; ?>
                         </ul>
