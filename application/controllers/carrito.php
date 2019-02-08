@@ -7,6 +7,7 @@ class Carrito extends CI_Controller {
     public function __construct() {
         parent::__construct();
         $this->load->library('cart');
+        $this->load->helper('form');
         $this->load->model('Carrito_model');
     }
 
@@ -16,13 +17,13 @@ class Carrito extends CI_Controller {
 
     public function agregar_producto($id) {
         $producto = $this->Carrito_model->producto_selc($id);
-        $cantidad = 1;
+        $cantidad = $this->input->post('cant');
 
         $carrito = $this->cart->contents();
 
         foreach ($carrito as $item) {
             if ($item['id'] == $id) {
-                $cantidad = 1 + $item['qty'];
+                $item['qty'] += $cantidad;
             }
         }
 
@@ -36,7 +37,7 @@ class Carrito extends CI_Controller {
         );
 
         $this->cart->insert($data);
-        $this->index();
+        redirect('Carrito');
     }
 
     public function eliminar_producto($rowid) {
@@ -46,12 +47,20 @@ class Carrito extends CI_Controller {
         );
 
         $this->cart->update($producto);
-        $this->index();
+        redirect('Carrito');
+    }
+
+    public function actualizar_carrito() {
+        foreach ($this->cart->contents() as $item) {
+            $item['qty'] = $this->input->post($item['rowid']);
+        }
+        $this->cart->update($item);
+        redirect('Carrito');
     }
 
     public function eliminar_carrito() {
         $this->cart->destroy();
-        $this->index();
+        redirect('Carrito');
     }
 
 }
